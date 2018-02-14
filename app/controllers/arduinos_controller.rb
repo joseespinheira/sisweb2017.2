@@ -94,6 +94,6 @@ class ArduinosController < ApplicationController
     end
     def preparar_form
       @equipamentos = Equipamento.order :nome
-      @comandos = Comando.order :nome
+      #@comandos = Comando.order :nome
     end
 end

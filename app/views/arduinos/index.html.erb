@@ -19,12 +19,12 @@
         <td><%= arduino.ip %></td>
         <td><%= arduino.nome %></td>
         <td><%= arduino.equipamento.nome %></td>
-        <td><%= arduino.equipamento.comando.nome %></td>
+        <td><%= link_to arduino.equipamento.comando.nome, "http://"+arduino.ip+"/"+arduino.equipamento.comando.comando, remote: true %></td>
         <td><%= link_to 'Show', arduino %></td>
         <td><%= link_to 'Edit', edit_arduino_path(arduino) %></td>
         <td><%= link_to 'Destroy', arduino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Enviar Comando', "http://"+arduino.ip+"/"+arduino.equipamento.comando.comando, method: :post, :target => '_blank' %></td>
-        <td><%= link_to 'Enviar Comando12345', "http://"+arduino.ip+"/"+arduino.equipamento.comando.comando, remote: true %></td>
+        
         
       </tr>
     <% end %>

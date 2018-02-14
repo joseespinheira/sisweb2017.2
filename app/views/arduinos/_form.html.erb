@@ -1,0 +1,32 @@
+<%= form_with(model: arduino, local: true) do |form| %>
+  <% if arduino.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(arduino.errors.count, "error") %> prohibited this arduino from being saved:</h2>
+
+      <ul>
+      <% arduino.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_field :ip, id: :arduino_ip %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :arduino_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :equipamento_id %>
+    <%= form.collection_select(:equipamento_id, @equipamentos, :id, :nome, :prompt => true) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comandos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Comando</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comandos.each do |comando| %>
+      <tr>
+        <td><%= comando.id %></td>
+        <td><%= comando.nome %></td>
+        <td><%= comando.comando %></td>
+        <td><%= link_to 'Show', comando %></td>
+        <td><%= link_to 'Edit', edit_comando_path(comando) %></td>
+        <td><%= link_to 'Destroy', comando, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comando', new_comando_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: comando, local: true) do |form| %>
+  <% if comando.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comando.errors.count, "error") %> prohibited this comando from being saved:</h2>
+
+      <ul>
+      <% comando.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :comando_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comando %>
+    <%= form.text_field :comando, id: :comando_comando %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

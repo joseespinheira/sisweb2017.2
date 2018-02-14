@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @arduino.ip %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @arduino.nome %>
+</p>
+
+<p>
+  <strong>Equipamento:</strong>
+  <%= @arduino.equipamento.nome %>
+</p>
+
+<p>
+  <strong>Comando:</strong>
+  <%= @arduino.equipamento.comando.nome %>
+</p>
+
+
+<%= link_to 'Estado do equipamento', "http://"+@arduino.ip+"/"+"?estado", target: "framename" %></br></br>
+
+
+<%= link_to 'Edit', edit_arduino_path(@arduino) %> |
+<%= link_to 'Back', arduinos_path %>

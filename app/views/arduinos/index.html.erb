@@ -1,16 +1,18 @@
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Arduinos</h1>
 
-<table>
+<table style="background-color: #fff;">
   <thead>
     <tr>
-      <th>teste</th>
-      <th>Ip</th>
+
+      <!--th>Ip</th-->
       <th>Nome</th>
       <th>Equipamento</th>
       <th>Comando</th>
-      <th colspan="3"></th>
+      <th colspan="4">Ações</th>
     </tr>
   </thead>
 
@@ -18,8 +20,7 @@
     <% @arduinos.each do |arduino| %>
       <% if arduino.user_id == current_user.id%>
       <tr>
-        <td><%= arduino.user_id %></td>
-        <td><%= arduino.ip %></td>
+        <!--td><%= arduino.ip %></td-->
         <td><%= arduino.nome %></td>
         <td><%= arduino.equipamento.nome %></td>
         <td><%= link_to arduino.equipamento.comando.nome, "http://"+arduino.ip+"/"+arduino.equipamento.comando.comando, remote: true %></td>

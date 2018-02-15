@@ -1,29 +1,29 @@
 
-
-
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <% if user_signed_in? %><a class="brand" href="/">Gerenciamento</a>
-      <ul class="nav">
-        <li class="active"><a href="/arduinos">Arduino</a></li>
-        
-        <% if ( current_user.email == "admin@admin.com") %>
-            <li class="active"><a href="/equipamentos">Equipamento</a></li>
-            <li class="active"><a href="/comandos">Comando</a></li>
-        <% end %>
-        
-      </ul>
-      <p class="navbar-text pull-right">
-        
-          Logged in as <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between" style="background-color: #4CAF50;border-radius: 15px;">
+  <a class="navbar-brand" href="/">SIGECA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <div class="collapse navbar-collapse">
+        <% if user_signed_in? %>
+          <a class="nav-item nav-link" href="/arduinos">Arduino</a>
+          <% if ( current_user.email == "admin@admin.com") %>
+            <a class="nav-item nav-link" href="/equipamentos">Equipamento</a>
+            <a class="nav-item nav-link" href="/comandos">Comando</a>
+          <% end %>
+      </div>
+          
+      <div class="collapse navbar-collapse">
+          <a class="nav-item nav-link">Logged in as <strong><%= current_user.email %></strong>.</a>
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav-item nav-link' %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-item nav-link'  %>
         <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'nav-item nav-link'  %>
+          <%= link_to "Login", new_user_session_path, :class => 'nav-item nav-link'  %>
         <% end %>
-      </p>
+      </div>
     </div>
   </div>
-</div>
+</nav>

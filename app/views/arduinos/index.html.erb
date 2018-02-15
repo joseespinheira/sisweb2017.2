@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>teste</th>
       <th>Ip</th>
       <th>Nome</th>
       <th>Equipamento</th>
@@ -15,7 +16,9 @@
 
   <tbody>
     <% @arduinos.each do |arduino| %>
+      <% if arduino.user_id == current_user.id%>
       <tr>
+        <td><%= arduino.user_id %></td>
         <td><%= arduino.ip %></td>
         <td><%= arduino.nome %></td>
         <td><%= arduino.equipamento.nome %></td>
@@ -27,6 +30,7 @@
         
         
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

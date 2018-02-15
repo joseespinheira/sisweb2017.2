@@ -90,7 +90,7 @@ class ArduinosController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def arduino_params
-      params.require(:arduino).permit(:ip, :nome, :equipamento_id)
+      params.require(:arduino).permit(:ip, :nome, :equipamento_id, :user_id)
     end
     def preparar_form
       @equipamentos = Equipamento.order :nome

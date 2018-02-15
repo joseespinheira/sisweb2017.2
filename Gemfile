@@ -23,7 +23,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'responders', '~> 2.3'
 #gema para criar usuario e senha
 gem 'devise'
-
+# game para bootstrap
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

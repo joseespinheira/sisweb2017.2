@@ -4,6 +4,7 @@ class CreateArduinos < ActiveRecord::Migration[5.1]
       t.string :ip
       t.string :nome
       t.integer :equipamento_id
+      t.integer :user_id
 
       t.timestamps
     end

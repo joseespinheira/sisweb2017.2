@@ -10,8 +10,11 @@
 Comando.create(nome: "Ligar", comando: "?ligar");
 Comando.create(nome: "Desligar", comando: "?desligar");
 
-Equipamento.create(nome:"Lampada", comando_id:"1")
-Equipamento.create(nome:"Lampada", comando_id:"2")
+Equipamento.create(nome:"Lampada_ligar", comando_id:"1")
+Equipamento.create(nome:"Lampada_desligar", comando_id:"2")
 
 
-#Arduino.create(ip: "192.168.0.888", equipamento_id: "1");
+#Arduino.create(ip: "192.168.0.888", equipamento_id: "1")
+
+
+User.create(:email=>"admin@admin.com",:password => "123456", :password_confirmation => "123456")

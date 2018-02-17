@@ -1,24 +1,12 @@
-# README
+# Projeto SIGEC@
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sitema de Gerenciamento de Casa Inteligente
 
-Things you may want to cover:
+# Organização:
+- Arduino
 
-* Ruby version
+Pasta que contem os arquivos que iram para o arduino.
 
-* System dependencies
+- WebRuby
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Pasta que contem o servidor web com o projeto.

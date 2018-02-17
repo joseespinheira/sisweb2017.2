@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+    </div>
+    <div class="col-lg-6 col-md-8" style="background-color: lightblue;padding: 25px 25px 25px 25px;border-radius: 15px;">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @arduino.ip %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @arduino.nome %>
+</p>
+
+<p>
+  <strong>Equipamento:</strong>
+  <%= @arduino.equipamento.nome %>
+</p>
+
+<p>
+  <strong>Comando:</strong>
+  <%= @arduino.equipamento.comando.nome %>
+</p>
+
+
+<%= link_to 'Estado do equipamento', "http://"+@arduino.ip+"/"+"?estado", target: "framename" %></br></br>
+
+
+<%= link_to 'Edit', edit_arduino_path(@arduino) %> |
+<%= link_to 'Back', arduinos_path %>
+
+    </div>
+    <div class="col col-lg-2">
+    </div>
+  </div>
+</div>
